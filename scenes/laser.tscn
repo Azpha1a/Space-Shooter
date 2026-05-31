@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://h5awh74k7677"]
+
+[ext_resource type="Script" uid="uid://cbynvunsbq7q" path="res://scripts/laser.gd" id="1_a7dhc"]
+[ext_resource type="Texture2D" uid="uid://bwk37gml0ibxg" path="res://assets/graphics/lasers/laserBlue16.png" id="2_a7dhc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7dhc"]
+radius = 4.0
+height = 54.0
+
+[node name="Laser" type="Area2D" unique_id=936489406]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_a7dhc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1754281647]
+scale = Vector2(0.61538464, 1)
+texture = ExtResource("2_a7dhc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038984798]
+shape = SubResource("CapsuleShape2D_a7dhc")
